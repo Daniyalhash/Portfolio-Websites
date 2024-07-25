@@ -1,0 +1,107 @@
+/* Define CSS variables for consistent styling */
+:root {
+    --first-light: #FCFBFD;
+    --second-light-gray: #F7F7FA;
+    --third-gray: #F3F2F7;
+    --fourth-dark-gray: #CAC9CF;
+    --fifth-dark: #1F2024;
+    --color-btn-accent: #1F2024;
+    --color-btn-accent-hover: #0000;
+    --color-btn-light: #F7F7FA;
+    --font--1: 'Unbounded', Arial, sans-serif;
+    --font--2: 'Inter Tight', Arial, sans-serif;
+    --footer-background: #F7F7FA; /* Background color for the footer */
+}
+
+.footer {
+    background-color: var(--footer-background);
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Ensure footer is properly placed at the bottom of the page */
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-nav-bar h1 {
+    text-transform: capitalize;
+    font-family: "Luxurious Script", cursive;
+    font-weight: 400;
+    font-size: 2rem; /* Adjust font size to fit better */
+    text-align: center; /* Corrected from 'le4' to 'center' */
+    margin-bottom: 20px; /* Add margin to separate from nav items */
+}
+
+.footer-nav-items {
+    display: flex;
+    gap: 15px; /* Space between nav items */
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    justify-content: center; /* Center items horizontally */
+}
+
+.footer-nav-link {
+    color: var(--fifth-dark);
+    text-decoration: none;
+    font-family: var(--font--2);
+    font-size: 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+    padding: 10px 15px; /* Add padding to increase clickable area */
+    border-radius: 5px; /* Rounded corners for buttons */
+    background-color: var(--color-btn-light); /* Default background color */
+}
+
+.footer-nav-link:hover {
+    color: var(--color-btn-accent);
+    background-color: var(--fourth-dark-gray); /* Change background color on hover */
+}
+
+/* Optional: Style for additional text */
+.footer-nav-bar p {
+    color: var(--fourth-dark-gray);
+    margin-top: 10px; /* Space above paragraph */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .footer-nav-bar {
+        height: auto;
+        padding: 15px; /* Reduce padding on larger tablets or smaller desktops */
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-nav-bar h1 {
+        font-size: 1.8rem; /* Adjust font size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-nav-bar h1 {
+        font-size: 1.5rem; /* Adjust font size for mobile phones */
+    }
+
+    .footer-nav-items {
+        flex-direction: column;
+        gap: 10px; /* Reduce gap for vertical layout */
+    }
+
+    .footer-nav-link {
+        font-size: 0.9rem; /* Adjust font size for mobile phones */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-nav-bar h1 {
+        font-size: 1.2rem; /* Adjust font size for very small screens */
+    }
+
+    .footer-nav-link {
+        padding: 8px 12px; /* Adjust padding for small screens */
+        font-size: 0.8rem; /* Further reduce font size for very small screens */
+    }
+}

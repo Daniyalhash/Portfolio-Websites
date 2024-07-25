@@ -1,0 +1,19 @@
+:root {
+  --first-color-lightest: #F8F9FA;
+  --second-color-lightest: #DEE2E6;
+  --second-color-lighter: #ADB5BD;
+  --third-color-light: #6C757D;
+  --fourth-color-dark: #343A40;
+  --fifth-color-darkest: #212529;
+  --font--1: 'BIZ UDPGothic', sans-serif;
+  --font--2: 'Cabin', sans-serif;
+  --logo-font: 'Poppins', sans-serif; /* Added Google Font for the logo */
+}
+body {
+  margin: 0;
+  background-color: var(--second-color-lighter);
+}
+
+.App {
+
+}

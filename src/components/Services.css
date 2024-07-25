@@ -1,0 +1,251 @@
+:root {
+  --first-light: #FCFBFD;
+  --second-light-gray: #F7F7FA;
+  --third-gray: #F3F2F7;
+  --fourth-dark-gray: #CAC9CF;
+  --fifth-dark: #1F2024;
+  --color-btn-accent: #1F2024;
+  --color-btn-accent-hover: #0000;
+  --color-btn-light: #F7F7FA;
+  --color-btn-light: #F3F2F7;
+
+  --font--1: 'Unbounded',Arial,sans-serif;
+  --font--2: 'Inter Tight',Arial,sans-serif; /* Added Google Font for the logo */
+}
+
+.services{
+  height: 50vh;
+  background-color: var( --first-light);
+display: flex;
+justify-content: center;
+align-items:center ;
+margin:0 auto;
+ padding: 40px;
+  box-sizing: border-box;
+}
+.services-text{
+ 
+  justify-content: left;
+margin:0 auto;
+width: 30%;;
+  padding: 10px;
+}
+.text-div{
+  width: 100%;
+}
+.text-div .text-link h1{
+  font-family: var(--font--2);  
+    font-size: 2rem; 
+    font-weight: 600;
+}
+.text-link {
+  display: flex; /* Use flexbox to align items horizontally */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between;
+}
+
+
+
+
+.services-show {
+  align-items: center;
+display: flex; /* Use flexbox for layout */
+flex-wrap: wrap; /* Allow items to wrap to the next line */
+justify-content: center; /* Center items horizontally */
+gap: 20px; /* Add space between articles */
+
+padding: 10px;
+transition: overflow 0.3s ease; /* Smooth transition effect */
+}
+/* Make the project-show scrollable on hover */
+.services-show:hover {
+  overflow-y: auto; /* Enable vertical scrolling on hover */
+}
+
+
+/* Container for the articles */
+.services-show {
+  border: 1px solid var(--color-btn-accent-hover);
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Add space between articles */
+  height: 90vh;
+  border-radius: 25px;
+
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Style for individual articles */
+.service-article {
+  width: 20%;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  width: calc(50% - 20px); /* Two articles per row with spacing */
+  box-sizing: border-box;
+  padding: 20px;
+  cursor: pointer;
+  height: 23vh;
+  border: 2px solid var(--color-btn-accent);
+  font-family: var(--font--2);
+  background-color: var(--second-light-gray); /* Light background for better readability */
+  margin-bottom: 20px; /* Space between articles vertically */
+  border-radius: 25px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover effect for articles */
+.service-article:hover {
+  background-color: var(--fifth-dark); /* Change background color to black */
+  color: var(--first-light); /* Change text color to ensure readability */
+  transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+/* Style for the text container */
+.art-text-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px; /* Space between text elements */
+}
+
+.art-text-div h2 {
+  font-size: 24px;
+  font-family: var(--font--2);
+  font-weight: 700;
+  margin: 0;
+}
+
+.art-text-div p2 {
+  font-size: 18px;
+  font-family: var(--font--2);
+  font-weight: 500;
+  color: var(--fourth-dark-gray); /* Dark color for emphasis */
+  margin: 5px 0 0;
+}
+
+/* Style for the second text container */
+.art-text-div-2 {
+  margin-bottom: 15px;
+}
+
+.art-text-div-2 p3 {
+  font-size: 16px;
+  font-family: var(--font--2);
+  color: var(--fourth-dark-gray); /* Gray color for less emphasis */
+  margin: 0;
+}
+
+/* Style for the action container */
+.art-text-div-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.art-text-div-3 p4 {
+  text-transform: capitalize;
+  font-family: "Luxurious Script", cursive;
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-style: normal;
+}
+
+.iconOrder {
+  display: flex;
+  padding: 4px 12px;
+  border-radius: 25px;
+  background-color: #007bff;
+  border: 1px solid var(--color-btn-accent-hover);
+  align-items: center;
+  font-family: var(--font--2);
+  font-weight: 600;
+  color: var(--first-light); /* Accent color for the action */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.iconOrder:hover {
+  color:; /* Darker shade on hover */
+  
+}
+
+.iconOrder h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.iconOrder svg {
+  margin-left: 8px;
+  font-size: 20px; /* Adjust size as needed */
+  vertical-align: middle;
+}/* Responsive adjustments */
+@media (max-width: 768px) {
+  .services{
+    height: auto;
+  }
+  .service-article {
+    width: calc(100% - 20px); /* One article per row on smaller screens */
+  }
+  .service-article{
+    height: auto;
+    padding: auto;
+  }
+  .text-div .text-link h1 {
+    font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+  .art-text-div{
+    display: inline;
+  }
+  .art-text-div h2{
+    font-size: 20px;
+  }
+  .LinkedIn-button {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .services{
+    height: auto;
+  }
+  .service-article{
+    height: auto;
+    padding: auto;
+  }
+  .services-text {
+    width: 100%; /* Full width on extra-small screens */
+    padding: 5px;
+  }
+
+  .text-div .text-link h1 {
+    font-size: 1.2rem; /* Even smaller font size for very small screens */
+  }
+  .art-text-div-3{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+
+  }
+  .art-text-div{
+    display: inline;
+  }
+  .art-text-div h2{
+    font-size: 20px;
+  }
+  .art-text-div-3 .iconOrder h3{
+    font-size: 15px;
+  }
+  .art-text-div-3  p4{
+    font-size: 40px;
+    text-align: center;
+  }
+  .LinkedIn-button {
+    font-size: 16px; /* Further adjust font size for very small screens */
+    padding: 8px 20px; /* Adjust padding for small screens */
+  }
+}

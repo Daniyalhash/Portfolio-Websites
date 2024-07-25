@@ -1,0 +1,34 @@
+:root {
+    --first-light: #FCFBFD;
+    --second-light-gray: #F7F7FA;
+    --third-gray: #F3F2F7;
+    --fourth-dark-gray: #CAC9CF;
+    --fifth-dark: #1F2024;
+    --color-btn-accent: #1F2024;
+    --color-btn-accent-hover: #0000;
+    --color-btn-light: #F7F7FA;
+    --color-btn-light: #F3F2F7;
+  
+    --font--1: 'Unbounded',Arial,sans-serif;
+    --font--2: 'Inter Tight',Arial,sans-serif; /* Added Google Font for the logo */
+  }
+  
+  .Landing {
+    background-color: var( --first-light);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Landing-main {
+    width: 95%;
+    height: 94vh;
+    border: 2px solid var(--second-light-gray);
+    border-radius: 25px;
+    background: #ebeaed;
+    background: -webkit-linear-gradient(272deg, #ebeaed 0%, #ebeaed 100%);
+    background: linear-gradient(272deg, #ebeaed 0%, #ebeaed 100%);
+    /* Add Flexbox for vertical stacking */
+    
+}

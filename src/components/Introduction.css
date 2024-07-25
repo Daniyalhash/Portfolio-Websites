@@ -1,0 +1,181 @@
+/* Define CSS variables for consistent styling */
+:root {
+    --first-light: #FCFBFD;
+    --second-light-gray: #F7F7FA;
+    --third-gray: #F3F2F7;
+    --fourth-dark-gray: #CAC9CF;
+    --fifth-dark: #1F2024;
+    --color-btn-accent: #1F2024;
+    --color-btn-accent-hover: #0000;
+    --color-btn-light: #F7F7FA;
+    --color-btn-light: #F3F2F7;
+
+    --font--1: 'Unbounded',Arial,sans-serif;
+    --font--2: 'Inter Tight',Arial,sans-serif; /* Added Google Font for the logo */
+}
+  .intro{
+    display: block;
+  }
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    height: 70vh; /* Adjust height as needed */
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    overflow: hidden;
+    
+}
+
+.intro-text {
+    flex: 1;
+    z-index: 1;
+    line-height: 1.2;
+    display: block;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    margin-left: 40%;
+    position: relative;
+    max-width: 600px;
+    text-align: center; /* Adjust max width as needed */
+}
+
+.intro-text p,
+.intro-text h1,
+.intro-text p2 {
+    margin: 0;
+    padding: 0;
+}
+
+.intro-text p {
+    font-size: 3rem;
+    margin: 0 auto;
+    text-transform: capitalize;
+    font-family: "Luxurious Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+.intro-text h1 {
+    font-size: 3.6rem;
+    font-family: var(--font--1);
+}
+
+.intro-text p2 {
+    font-size: 1rem;
+    color: var(--fifth-dark);
+    font-family: var(--font--2);
+}
+
+.intro-element {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.magicpattern {
+    width: 600px; /* Increased width */
+    height: 600px; /* Increased height */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; /* Ensure pattern doesn’t repeat */ /* Ensure pattern doesn’t repeat */
+    background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22c%22%3E%3Cpath fill=%22currentColor%22 d=%22M824.5 623Q697 746 550.5 834T270 798.5Q136 675 192.5 527T335 266.5q86-112.5 221.5-60t265.5 173Q952 500 824.5 623Z%22%2F%3E%3C%2FclipPath%3E%3Cpattern id=%22a%22 patternUnits=%22userSpaceOnUse%22 width=%2225%22 height=%2225%22 viewBox=%220 0 100 100%22 fill=%22%23212121%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2212.5%22%2F%3E%3C%2Fpattern%3E%3Cfilter id=%22b%22 x=%22-50vw%22 y=%22-50vh%22 width=%22100vw%22 height=%22100vh%22%3E%3CfeFlood flood-color=%22%23fff%22 result=%22neutral-gray%22%2F%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%222.5%22 numOctaves=%22100%22 stitchTiles=%22stitch%22 result=%22noise%22%2F%3E%3CfeColorMatrix in=%22noise%22 type=%22saturate%22 values=%220%22 result=%22destaturatedNoise%22%2F%3E%3CfeComponentTransfer in=%22desaturatedNoise%22 result=%22theNoise%22%3E%3CfeFuncA type=%22table%22 tableValues=%220 0 0.4 0%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeBlend in=%22SourceGraphic%22 in2=%22theNoise%22 mode=%22soft-light%22 result=%22noisy-image%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cpath fill=%22url(%23a)%22 d=%22M824.5 623Q697 746 550.5 834T270 798.5Q136 675 192.5 527T335 266.5q86-112.5 221.5-60t265.5 173Q952 500 824.5 623Z%22 transform=%22translate(-60 -60)%22%2F%3E%3Cg filter=%22url(%23b)%22 clip-path=%22url(%23c)%22%3E%3Cpath fill=%22%23212121%22 d=%22M824.5 623Q697 746 550.5 834T270 798.5Q136 675 192.5 527T335 266.5q86-112.5 221.5-60t265.5 173Q952 500 824.5 623Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  }
+  .iconArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    margin: 0 auto;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--fifth-dark);
+    font-weight: bold;
+    font-size: 20px;
+    background-color: var(--first-light); /* Optional: background color */
+    position: absolute; /* Use absolute positioning */
+    bottom: 20px; /* Adjust as needed */
+    margin-right: 50%;
+    border: 1px solid var(--fifth-dark);
+
+}
+
+.arrow {
+    /* No additional styles needed here */
+}
+/* Responsive Styles */
+@media (max-width: 768px) { /* Tablets and smaller screens */
+    .intro-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        height: auto; /* Adjust height for flexibility */
+        padding: 15px;
+    }
+
+    .intro-text {
+        margin-left: 0; /* Reset margin for smaller screens */
+        max-width: 100%; /* Ensure text fits the screen */
+    }
+
+    .intro-text p{
+        font-size: 3rem;
+    }
+    .intro-text h1,
+    .intro-text p2 {
+        font-size: 1.3rem; /* Adjust font size for readability */
+    }
+
+    .intro-text h1 {
+        font-size: 3.5rem; /* Adjust font size */
+    }
+
+    .intro-element {
+        display: none; /* Hide the element on smaller screens if not needed */
+    }
+
+    .magicpattern {
+        width: 100%; /* Make the pattern responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .iconArrow {
+        display: none; /* Adjust position */
+    }
+}
+
+@media (max-width: 480px) { /* Phones and very small screens */
+    .intro-container {
+        padding: 10px;
+    }
+
+    .intro-text {
+        margin-left: 0; /* Reset margin */
+        max-width: 100%;
+    }
+
+    .intro-text p{
+        font-size: 3rem;
+    }
+    .intro-text h1,
+    .intro-text p2 {
+        font-size: 1.3rem; /* Adjust font size for readability */
+    }
+
+    .intro-text h1 {
+        font-size:2rem; /* Adjust font size */
+    }
+
+    .magicpattern {
+        width: 100%; /* Full width for small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .iconArrow {
+        display: none; /* Adjust position */
+    }
+}

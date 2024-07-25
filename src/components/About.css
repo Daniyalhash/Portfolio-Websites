@@ -1,0 +1,163 @@
+/* Define CSS variables for consistent styling */
+:root {
+    --first-light: #FCFBFD;
+    --second-light-gray: #F7F7FA;
+    --third-gray: #F3F2F7;
+    --fourth-dark-gray: #CAC9CF;
+    --fifth-dark: #1F2024;
+    --color-btn-accent: #1F2024;
+    --color-btn-accent-hover: #0000;
+    --color-btn-light: #F7F7FA;
+    --font--1: 'Unbounded', Arial, sans-serif;
+    --font--2: 'Inter Tight', Arial, sans-serif; /* Added Google Font for the logo */
+}
+
+.about {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--first-light); /* Using CSS variable for consistency */
+    padding: 0 20px; /* Optional: Add padding to ensure content doesn't touch the edges */
+}
+
+.container-img,
+.container-txt {
+    flex: 1;
+    max-width: 500px; /* Adjust as needed */
+    margin: 0 20px; /* Space between the two containers */
+}
+.container-img{
+
+}
+.container-img img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners for the image */
+}
+
+.container-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.container-txt h3 {
+    font-family: var(--font--2);
+    text-align: left;
+    font-size: 1.5rem; /* Adjust font size as needed */
+    margin-bottom: -30px;
+    color: var(--fourth-dark-gray);
+}
+
+.container-txt h1 {
+    font-family: var(--font--2);
+    font-size: 3rem; /* Adjust font size as needed */
+    margin-bottom: -9px;
+    text-align: left;
+}
+
+.container-txt p {
+    font-family: var(--font--2);
+    font-size: 1rem; /* Adjust font size as needed */
+    text-align: left;
+}
+.button-jungle{
+    justify-content: center;
+    margin: auto;
+}
+.btn-linkedIn {
+    background-color: blue; /* Default black background */
+    color: var(--first-light); /* Default text color */
+    border: none; /* Remove default border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 20px; /* Adjust padding as needed */
+    display: flex; /* Use flexbox to align items */
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: var(--font--2); /* Use your font */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.btn-linkedIn:hover {
+    border: 1px solid blue;
+    background-color: var(--first-light); /* Change background color on hover */
+    color: var(--color-btn-accent-hover); /* Change text color on hover */
+}
+
+.btn-linkedIn .arrow-icon {
+    color: var(--first-light); /* Default color for the arrow */
+    font-size: 1.5rem; /* Adjust arrow icon size */
+    border: 1px solid var(--color-btn-light);
+    border-radius: 50%;
+    margin-left: 8px; /* Space between text and arrow */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+}
+.linkedIn-text{
+    font-size: 1rem;
+    color: var(--first-light); /* Default color for the arrow */
+}
+.btn-linkedIn:hover .linkedIn-text
+{
+    color: blue; /* Default color for the arrow */
+
+}
+.btn-linkedIn:hover .arrow-icon {
+    transform: rotate(90deg); /* Rotate arrow to point downward on hover */
+    color: blue; 
+    border: 1px solid blue;
+    /* Default color for the arrow */
+}
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .container-img,
+    .container-txt {
+        max-width: 100%; /* Full width on small screens */
+        margin: 10px 0; /* Adjust margin for better spacing on smaller screens */
+    }
+
+    .container-txt h1 {
+        font-size: 2.5rem; /* Smaller font size on small screens */
+    }
+
+    .container-txt h3 {
+        font-size: 1.25rem; /* Smaller font size on small screens */
+    }
+
+    .container-txt p {
+        font-size: 0.875rem; /* Smaller font size on small screens */
+    }
+    
+    .button-jungle {
+        margin: 20px 0; /* Adjust margin for better spacing on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container-txt h1 {
+        font-size: 2rem; /* Further smaller font size on very small screens */
+    }
+
+    .container-txt h3 {
+        font-size: 1rem; /* Further smaller font size on very small screens */
+    }
+
+    .container-txt p {
+        font-size: 0.75rem; /* Further smaller font size on very small screens */
+    }
+    
+    .btn-linkedIn {
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
+
+    .btn-linkedIn .arrow-icon {
+        font-size: 1.25rem; /* Smaller arrow icon size */
+    }
+}
